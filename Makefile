@@ -1,13 +1,12 @@
-CC=gcc
-CFLAGS=-Wall -O2 -g -std=c99 -std=gnu99
+CC = gcc
+CFLAGS = -g -I -std=gnu99 -lpthread -std=c99 -D_POSIX_C_SOURCE=200809 -D_SVID_SOURCE
+all: oss process
 
-all: oss user
+oss: config.h oss.c
+	$(CC) -o $@ $^ $(CFLAGS)
 
-oss: oss.c
-	$(CC) $(CFLAGS) oss.c -o oss
-
-user: user.c
-	$(CC) $(CFLAGS) user.c -o user
+uprocess: config.h process.c
+	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
-	rm -rf oss user log.txt 
+	rm oss process output
