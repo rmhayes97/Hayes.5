@@ -5,7 +5,7 @@ Date: 4/21/22
 CS4760 - Project 5
 GitHub Repository Link: https://github.com/rmhayes97/Hayes.5.git
 
-How to run the program: make then use ./oss When you are finished with the program 
+How to run the program: make then use ./oss When you are finished with the program use make clean
 
 Deadlock detection algorithm was found on GeeksForGeeks and troubleshooted using StackOverflow
 
